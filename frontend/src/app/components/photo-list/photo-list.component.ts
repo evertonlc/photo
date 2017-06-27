@@ -25,4 +25,8 @@ export class PhotoListComponent implements OnInit {
       error => console.log(error));
   }
 
+  onSelect(photo: Photo) {
+    this.selectedPhoto = photo;
+  }
+
 }

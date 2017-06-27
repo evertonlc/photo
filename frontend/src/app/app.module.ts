@@ -1,20 +1,27 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home.component';
 import { PhotoListComponent } from './components/photo-list/photo-list.component';
+import { SidePanelComponent } from './components/side-panel/side-panel.component';
+import { PhotoService } from './services/photo.service';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    PhotoListComponent
+    PhotoListComponent,
+    SidePanelComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [PhotoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
