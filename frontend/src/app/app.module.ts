@@ -8,18 +8,22 @@ import { PhotoListComponent } from './components/photo-list/photo-list.component
 import { SidePanelComponent } from './components/side-panel/side-panel.component';
 import { PhotoService } from './services/photo.service';
 import { HttpModule } from '@angular/http';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import {AppRoutingModule} from './app.routing.module.';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     PhotoListComponent,
-    SidePanelComponent
+    SidePanelComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AppRoutingModule
   ],
   providers: [PhotoService],
   bootstrap: [AppComponent]
