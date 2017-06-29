@@ -10,6 +10,8 @@ import { PhotoService } from './services/photo.service';
 import { HttpModule } from '@angular/http';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import {AppRoutingModule} from './app.routing.module.';
+import { RegisterComponent } from './components/register/register.component';
+import {RegisterService} from './services/register.service';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,8 @@ import {AppRoutingModule} from './app.routing.module.';
     HomeComponent,
     PhotoListComponent,
     SidePanelComponent,
-    NavBarComponent
+    NavBarComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +28,7 @@ import {AppRoutingModule} from './app.routing.module.';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [PhotoService],
+  providers: [PhotoService, RegisterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
