@@ -6,7 +6,7 @@ import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
-import java.time.LocalDate;
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -23,7 +23,7 @@ public class User {
 	private String password;
 	
 	@CreationTimestamp
-	private LocalDate created;
+	private Date created;
 	
 	@OneToMany(mappedBy="user", cascade=CascadeType.ALL, fetch = FetchType.EAGER)
     @JsonManagedReference
