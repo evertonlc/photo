@@ -7,6 +7,7 @@ import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -23,7 +24,7 @@ public class Photo {
     private String imageName;
 
     @CreationTimestamp
-    private LocalDate created;
+    private Date created;
 
     @ManyToOne
     @JsonBackReference
