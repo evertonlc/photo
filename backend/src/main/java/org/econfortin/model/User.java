@@ -1,8 +1,8 @@
 package org.econfortin.model;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
-import lombok.Builder;
 import lombok.Data;
+import lombok.experimental.Tolerate;
 import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
@@ -11,9 +11,8 @@ import java.util.List;
 
 @Entity
 @Data
-@Builder
 public class User {
-	
+
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long userId;
@@ -21,15 +20,14 @@ public class User {
 	private String lastName;
 	private String userName;
 	private String password;
-	
+
 	@CreationTimestamp
 	private Date created;
-	
+
 	@OneToMany(mappedBy="user", cascade=CascadeType.ALL, fetch = FetchType.EAGER)
     @JsonManagedReference
 	private List<Photo> photoList;
-	
+
 	@ManyToMany
 	private List<Photo> likedPhotoList;
-	
 }

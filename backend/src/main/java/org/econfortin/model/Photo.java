@@ -1,18 +1,15 @@
 package org.econfortin.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import lombok.Builder;
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
-import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
 @Entity
 @Data
-@Builder
 public class Photo {
 
     @Id
@@ -34,5 +31,4 @@ public class Photo {
 
     @OneToMany(mappedBy = "photo", fetch = FetchType.EAGER)
     private List<Comment> commentList;
-
 }
