@@ -1,7 +1,6 @@
 package org.econfortin.model;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
-import lombok.Builder;
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
 
@@ -11,7 +10,6 @@ import java.util.List;
 
 @Entity
 @Data
-@Builder
 public class User {
 	
 	@Id
@@ -31,5 +29,5 @@ public class User {
 	
 	@ManyToMany
 	private List<Photo> likedPhotoList;
-	
+
 }
