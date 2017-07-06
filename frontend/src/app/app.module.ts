@@ -12,6 +12,7 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import {AppRoutingModule} from './app.routing.module.';
 import { RegisterComponent } from './components/register/register.component';
 import {RegisterService} from './services/register.service';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {RegisterService} from './services/register.service';
     PhotoListComponent,
     SidePanelComponent,
     NavBarComponent,
-    RegisterComponent
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
