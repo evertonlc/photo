@@ -1,14 +1,12 @@
 package org.econfortin.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import lombok.Builder;
 import lombok.Data;
 
 import javax.persistence.*;
 
 @Entity
 @Data
-@Builder
 public class Comment {
 
 	@Id
@@ -22,6 +20,5 @@ public class Comment {
 	
 	private Long photoId;
 	private String userName;
-	
-	
+
 }

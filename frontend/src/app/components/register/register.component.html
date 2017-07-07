@@ -1,15 +1,15 @@
 <div>
   <form
     *ngIf="!registered"
-    (ngSubmit)="onSubmit()" #registerForm>
+    (ngSubmit)="onSubmit()" #registerForm name="form">
     <fieldset class="form-inline col-12">
       <legend>* Name</legend>
       <div class="form-group">
         <div class="col-lg-6 pl-0">
-          <input type="text" class="form-control" placeholder="First Name">
+          <input type="text" class="form-control" placeholder="First Name" [(ngModel)]="newUser.firstName" name="firstName">
         </div>
         <div class="col-lg-6 pl-0">
-          <input type="text" class="form-control" placeholder="Last Name">
+          <input type="text" class="form-control" placeholder="Last Name" [(ngModel)]="newUser.lastName" name="lastName">
         </div>
       </div>
     </fieldset>
@@ -17,10 +17,10 @@
       <legend>* Username/Password</legend>
       <div class="form-group">
         <div class="col-lg-4 pl-0">
-          <input type="text" class="form-control" placeholder="User Name">
+          <input type="text" class="form-control" placeholder="User Name" [(ngModel)]="newUser.userName" name="userName">
         </div>
         <div class="col-lg-4 pl-0">
-          <input type="password" class="form-control" placeholder="Password">
+          <input type="password" class="form-control" placeholder="Password" [(ngModel)]="newUser.password" name="password">
         </div>
         <div class="col-lg-4 pl-0">
           <input type="password" class="form-control" placeholder="Password Again">
@@ -28,6 +28,7 @@
       </div>
     </fieldset>
     <div class="form-group col-12">
+
       <button type="submit" class="btn btn-primary">Register</button>
     </div>
   </form>
