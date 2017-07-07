@@ -1,3 +1,21 @@
-<p>
-  login works!
-</p>
+<div class="container">
+  <form (ngSubmit)="onSubmit()" class="ui form" [hidden]="loginService.checkLogin()">
+    <div class="field">
+      <label for="username">Username</label>
+      <input id="username" [(ngModel)]="model.username" placeholder="Username" name="username" required><br>
+    </div>
+
+    <div class="field">
+      <label for="password">Password</label>
+      <input id="password" type="password" [(ngModel)]="model.password" placeholder="password" name="password" required>
+    </div>
+
+    <button class="ui button">Submit</button>
+  </form>
+
+  <div [hidden]="!loginService.checkLogin()">
+    <h3>Logged In Successfully! </h3>
+    <h2>Welcome back, {{currentUserName}}!</h2>
+  </div>
+
+</div>

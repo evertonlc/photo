@@ -13,6 +13,7 @@ import {AppRoutingModule} from './app.routing.module.';
 import { RegisterComponent } from './components/register/register.component';
 import {RegisterService} from './services/register.service';
 import { LoginComponent } from './components/login/login.component';
+import {LoginService} from "./services/login.service";
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import { LoginComponent } from './components/login/login.component';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [PhotoService, RegisterService],
+  providers: [PhotoService, RegisterService, LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

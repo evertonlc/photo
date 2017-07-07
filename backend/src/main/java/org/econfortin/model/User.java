@@ -2,7 +2,6 @@ package org.econfortin.model;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Data;
-import lombok.experimental.Tolerate;
 import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;

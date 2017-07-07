@@ -14,6 +14,7 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    @RequestMapping(value="/login", method = RequestMethod.POST)
     public String login() {
         return null;
     }
