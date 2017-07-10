@@ -14,6 +14,8 @@ import { RegisterComponent } from './components/register/register.component';
 import {RegisterService} from './services/register.service';
 import { LoginComponent } from './components/login/login.component';
 import {LoginService} from "./services/login.service";
+import { MyAlbumComponent } from './components/my-album/my-album.component';
+import {UserService} from "./services/user.service";
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import {LoginService} from "./services/login.service";
     SidePanelComponent,
     NavBarComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    MyAlbumComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +34,7 @@ import {LoginService} from "./services/login.service";
     HttpModule,
     AppRoutingModule
   ],
-  providers: [PhotoService, RegisterService, LoginService],
+  providers: [PhotoService, RegisterService, LoginService, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
