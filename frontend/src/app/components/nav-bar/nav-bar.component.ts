@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {LoginService} from "../../services/login.service";
 
 @Component({
   selector: 'nav-bar',
@@ -8,10 +9,20 @@ import { Component, OnInit } from '@angular/core';
 export class NavBarComponent implements OnInit {
 
   myLocalStorage;
+  loginService: LoginService;
 
-  constructor() { }
+  constructor(loginService: LoginService) {
+    this.loginService = loginService;
+    this.myLocalStorage=localStorage;
+  }
 
   ngOnInit() {
+  }
+
+  onClick() {
+    if(this.loginService.checkLogin()) {
+      this.loginService.logout();
+    }
   }
 
 }

@@ -15,7 +15,7 @@ export class LoginService {
   }
 
   sendToken(token) {
-    let tokenUrl2 = "http://localhost:8080/rest/user/ ";
+    let tokenUrl2 = "http://localhost:8080/rest/user/users";
     console.log('Bearer '+token);
 
     let getHeaders = new Headers({'Authorization':'Bearer '+token});
