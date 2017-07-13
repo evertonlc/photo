@@ -35,7 +35,7 @@ export class MyAlbumComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSelect(photo:Photo) {
+  onSelect(photo: Photo) {
     this.selectedPhoto = photo;
     this.router.navigate(['/image-detail', this.selectedPhoto.photoId]);
 
