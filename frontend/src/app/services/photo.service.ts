@@ -16,7 +16,7 @@ export class PhotoService {
   }
 
   getPhotos(): Observable<Photo[]> {
-    return this.http.get(`${this.publicUrl}/all`).map(data => {
+    return this.http.get(`${this.publicUrl}/all`, {headers: this.headers}).map(data => {
       return <Photo[]>JSON.parse(JSON.parse(JSON.stringify(data))._body);
     });
   }
