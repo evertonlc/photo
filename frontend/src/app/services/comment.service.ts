@@ -8,7 +8,7 @@ export class CommentService {
   constructor(private http: Http) { }
 
   addComment(comment: Comment) {
-    let url = "http://localhost:8080/rest/photo/add";
+    let url = "http://localhost:8080/rest/comment/add";
     let headers = new Headers({'Content-Type': 'application/json', 'Authorization':'Bearer '+localStorage.getItem("token")});
     return this.http.post(url, JSON.stringify(comment), {headers: headers});
 

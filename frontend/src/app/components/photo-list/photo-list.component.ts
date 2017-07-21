@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {PhotoService} from '../../services/photo.service';
 import {Photo} from '../../models/photo';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'photo-list',
@@ -12,7 +13,7 @@ export class PhotoListComponent implements OnInit {
   photos: Photo[];
   selectedPhoto: Photo;
 
-  constructor(private photoService: PhotoService) {
+  constructor(private photoService: PhotoService, private router: Router) {
 
   }
 
@@ -27,6 +28,7 @@ export class PhotoListComponent implements OnInit {
 
   onSelect(photo: Photo) {
     this.selectedPhoto = photo;
+    this.router.navigate(['image-detail', photo.photoId]);
   }
 
 }
